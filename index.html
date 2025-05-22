@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do Web App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 To-Do List</h1>
+      <button id="modeToggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+    <p id="welcomeMessage">Welcome to your To-Do List! Add tasks below.</p>
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter new task" />
+      <input type="datetime-local" id="taskDateTime" />
+      <input type="text" id="taskTag" placeholder="Tag (optional)" />
+      <button id="addTaskBtn">Add Task</button>
+      <button id="clearTasksBtn" class="clear-btn">Clear All Tasks</button>
+    </div>
+
+    <ul id="taskList" aria-live="polite"></ul>
+
+    <div class="next-task">
+      <h3>⏳ Next Task:</h3>
+      <p id="nextTaskText">No upcoming tasks</p>
+      <p id="countdown"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
