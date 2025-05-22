@@ -24,10 +24,14 @@ jobs:
       - name: Set up Pages
         uses: actions/configure-pages@v3
 
+      # If you have a build step, add it here, for example:
+      # - name: Build
+      #   run: npm ci && npm run build
+
       - name: Upload static files
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./  # or ./dist if you're using a build folder
+          path: ./ # Change to ./dist if your build outputs there
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
